@@ -6,13 +6,11 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/exynos2100
 
 PRODUCT_COPY_FILES += \
-    vendor/samsung/exynos2100/proprietary/vendor/etc/eden/gpu/eden_kernel_64.bin:$(TARGET_COPY_OUT_VENDOR)/etc/eden/gpu/eden_kernel_64.bin \
     vendor/samsung/exynos2100/proprietary/vendor/etc/gnss/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer \
     vendor/samsung/exynos2100/proprietary/vendor/etc/gnss/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml \
     vendor/samsung/exynos2100/proprietary/vendor/etc/hdr_samsung_mx.key:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_samsung_mx.key \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc \
-    vendor/samsung/exynos2100/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service.eden-drv.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/hermesd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hermesd.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/init.gps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps.rc \
@@ -20,7 +18,6 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/teegris_v4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris_v4.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/vendor.samsung.rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rild.rc \
-    vendor/samsung/exynos2100/proprietary/vendor/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung_slsi.hardware.eden_runtime@1.0-service.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/wifi_brcm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_brcm.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/mtu-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtu-conf.xml \
@@ -116,59 +113,21 @@ PRODUCT_PACKAGES += \
     libSEF.quram \
     libVendorSemDataProps \
     libVendorSemTelephonyProps \
-    libcommon \
-    libcrane_compiler \
+    libc++_shared \
     libdk_vnd_service_core \
-    libeden_gpu_boost_stub_vendor.edensdk.samsung \
-    libeden_model \
-    libeden_nn \
-    libeden_nn_on_vendor \
-    libeden_osal \
-    libeden_profiler \
-    libeden_rt \
-    libeden_rt_stub_vendor.edensdk.samsung \
-    libeden_ud_cpu \
-    libeden_ud_dsp \
-    libeden_ud_gpu \
-    libeden_ud_npu \
-    libeden_wrapper \
-    libeden_wrapper_sdk \
-    libeden_xtool \
     libeis_core \
     libengmode_client \
-    libenn_dsp_dal \
-    libenn_dsp_fw_graph_parser \
-    libenn_dsp_kernels_cpu \
     libese-grdg \
     libexynoscamera_plugin \
     libexynoscamera_plugin_utils \
-    libgraphgen_ann_import \
-    libgraphgen_ann_nnc \
-    libgraphgen_api \
-    libgraphgen_export \
-    libgraphgen_import \
-    libgraphgen_intermediate_process \
-    libgraphgen_misc \
-    libgraphgen_network \
     libhermes \
     libhermes_bdbridge \
     libhermes_cred \
     libhwjsqz \
     libhwvault \
-    libir \
     libkeymaster_helper \
     libmpbase \
-    libnpu_compiler \
-    libnpuc_api \
-    libnpuc_backend \
-    libnpuc_cmdq \
-    libnpuc_common \
-    libnpuc_controller \
-    libnpuc_frontend \
-    libnpuc_graph \
-    libnpuc_template \
     libril_sem \
-    libsait_npu_compiler \
     libsec-ril \
     libsec_semRil \
     libsemseg \
@@ -181,7 +140,6 @@ PRODUCT_PACKAGES += \
     libuniplugin \
     libuuid_vendor \
     libvkmanager_vendor \
-    libvpl \
     sensors.flicker \
     vendor.samsung.hardware.gnss@2.0 \
     vendor.samsung.hardware.gnss@2.1 \
@@ -194,9 +152,6 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio.sim-V1-ndk \
     vendor.samsung.hardware.security.drk@2.0 \
     vendor.samsung.hardware.thermal@1.0 \
-    vendor.samsung_slsi.hardware.eden_runtime@1.0-impl \
-    vendor.samsung_slsi.hardware.eden_runtime@1.0 \
-    vendor.samsung_slsi.hardware.gpu_boost@1.0 \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     vendor.samsung.hardware.radio.exclude.slsi.xml \
     vendor.samsung.hardware.radio_manifest_2_34.xml \
@@ -204,12 +159,10 @@ PRODUCT_PACKAGES += \
     hermesd \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.keymaster@4.0_strongbox-service \
-    android.hardware.neuralnetworks@1.3-service.eden-drv \
     gps \
     lhd \
     rild \
     vendor.samsung.hardware.gnss@2.1-service \
-    vendor.samsung_slsi.hardware.eden_runtime@1.0-service \
     tzdaemon \
     tzts_daemon
 
