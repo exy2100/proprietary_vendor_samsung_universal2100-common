@@ -1,4 +1,4 @@
-service hermesd /vendor/bin/hermesd /data/vendor/hermesgkpr
+service hermesd /vendor/bin/hermesd /data/vendor/gatekeeper
     class hal
     user system
     socket hermes_secnvm stream 660 system system
