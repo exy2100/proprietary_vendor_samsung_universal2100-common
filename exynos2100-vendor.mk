@@ -60,7 +60,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libGLES_mali \
     audio.sec_primary.default \
-    sound_trigger.primary.exynos2100 \
     vendor.samsung.hardware.audio@1.0-impl \
     vulkan.mali \
     libSamsungPostProcessConvertor \
