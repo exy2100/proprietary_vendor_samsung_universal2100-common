@@ -6,6 +6,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/exynos2100
 
 PRODUCT_COPY_FILES += \
+    vendor/samsung/exynos2100/proprietary/vendor/etc/ems.json:$(TARGET_COPY_OUT_VENDOR)/etc/ems.json \
+    vendor/samsung/exynos2100/proprietary/vendor/etc/epic.json:$(TARGET_COPY_OUT_VENDOR)/etc/epic.json \
     vendor/samsung/exynos2100/proprietary/vendor/etc/gnss/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer \
     vendor/samsung/exynos2100/proprietary/vendor/etc/gnss/gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.xml \
     vendor/samsung/exynos2100/proprietary/vendor/etc/hdr_samsung_mx.key:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_samsung_mx.key \
@@ -13,11 +15,11 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0_strongbox-service.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/hermesd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hermesd.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/init.baseband.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.baseband.rc \
-    vendor/samsung/exynos2100/proprietary/vendor/etc/init/init.gps.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/init.vendor.rilcommon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilcommon.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/teegris_v4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris_v4.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/vendor.samsung.rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rild.rc \
+    vendor/samsung/exynos2100/proprietary/vendor/etc/init/vendor.samsung_slsi.hardware.epic@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung_slsi.hardware.epic@1.0-service.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/init/wifi_brcm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_brcm.rc \
     vendor/samsung/exynos2100/proprietary/vendor/etc/mtu-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mtu-conf.xml \
@@ -102,6 +104,7 @@ PRODUCT_PACKAGES += \
     gatekeeper.exynos2100 \
     gps.default \
     vendor.samsung.hardware.gnss@2.1-impl \
+    vendor.samsung_slsi.hardware.epic@1.0-impl \
     libFilmGrainNoise \
     libIDDQD_core \
     libIDDQD_interface \
@@ -115,10 +118,15 @@ PRODUCT_PACKAGES += \
     libc++_shared \
     libdk_vnd_service_core \
     libeis_core \
+    libems_service \
     libengmode_client \
+    libepic_helper \
+    libepicoperator \
     libese-grdg \
+    libexynos_migov \
     libexynoscamera_plugin \
     libexynoscamera_plugin_utils \
+    libgmc \
     libhermes \
     libhermes_bdbridge \
     libhermes_cred \
@@ -151,10 +159,12 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio.sim-V1-ndk \
     vendor.samsung.hardware.security.drk@2.0 \
     vendor.samsung.hardware.thermal@1.0 \
+    vendor.samsung_slsi.hardware.epic@1.0 \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     vendor.samsung.hardware.radio.exclude.slsi.xml \
     vendor.samsung.hardware.radio_manifest_2_34.xml \
     vendor.samsung.hardware.sehradio_manifest_2_34.xml \
+    epic \
     hermesd \
     android.hardware.drm@1.3-service.widevine \
     android.hardware.keymaster@4.0_strongbox-service \
@@ -162,6 +172,7 @@ PRODUCT_PACKAGES += \
     lhd \
     rild \
     vendor.samsung.hardware.gnss@2.1-service \
+    vendor.samsung_slsi.hardware.epic@1.0-service \
     tzdaemon \
     tzts_daemon
 
