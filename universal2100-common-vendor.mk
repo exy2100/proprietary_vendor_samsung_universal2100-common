@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/samsung/universal2100-common
 
 PRODUCT_COPY_FILES += \
+    vendor/samsung/universal2100-common/proprietary/vendor/etc/eden/gpu/eden_kernel_64.bin:$(TARGET_COPY_OUT_VENDOR)/etc/eden/gpu/eden_kernel_64.bin \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/ems.json:$(TARGET_COPY_OUT_VENDOR)/etc/ems.json \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/epic.json:$(TARGET_COPY_OUT_VENDOR)/etc/epic.json \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/gnss/gps.cer:$(TARGET_COPY_OUT_VENDOR)/etc/gnss/gps.cer \
@@ -114,24 +115,61 @@ PRODUCT_PACKAGES += \
     libVendorSemDataProps \
     libVendorSemTelephonyProps \
     libc++_shared \
+    libcommon \
+    libcommon_graphgen_export \
+    libcrane_compiler \
     libdk_vnd_service_core \
+    libdove_compiler \
+    libeden_model \
+    libeden_nn \
+    libeden_osal \
+    libeden_profiler \
+    libeden_rt \
+    libeden_ud_cpu \
+    libeden_ud_dsp \
+    libeden_ud_gpu \
+    libeden_ud_npu \
+    libeden_xtool \
     libeis_core \
     libems_service \
     libengmode_client \
+    libenn_dsp_dal \
+    libenn_dsp_fw_graph_parser \
+    libenn_dsp_kernels_cpu \
     libepic_helper \
     libese-grdg \
     libexynos_migov \
     libexynoscamera_plugin \
     libexynoscamera_plugin_utils \
     libgmc \
+    libgraphgen_ann_import \
+    libgraphgen_ann_import_s \
+    libgraphgen_ann_nnc \
+    libgraphgen_api \
+    libgraphgen_export \
+    libgraphgen_import \
+    libgraphgen_intermediate_process \
+    libgraphgen_misc \
+    libgraphgen_network \
     libhermes \
     libhermes_bdbridge \
     libhermes_cred \
     libhwjsqz \
     libhwvault \
+    libir \
     libkeymaster_helper \
     libmpbase \
+    libnpu_compiler \
+    libnpuc_api \
+    libnpuc_backend \
+    libnpuc_cmdq \
+    libnpuc_common \
+    libnpuc_controller \
+    libnpuc_frontend \
+    libnpuc_graph \
+    libnpuc_template \
     libril_sem \
+    libsait_npu_compiler \
     libsec-ril \
     libsec_semRil \
     libsemseg \
@@ -140,10 +178,12 @@ PRODUCT_PACKAGES += \
     libskeymaster4device \
     libsn100u_fw \
     libteecl \
+    libtoco_graphgen_export \
     libuniapi \
     libuniplugin \
     libuuid_vendor \
     libvkmanager_vendor \
+    libvpl \
     sensors.flicker \
     vendor.samsung.hardware.gnss@2.0 \
     vendor.samsung.hardware.gnss@2.1 \
@@ -166,6 +206,7 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.0_strongbox-service \
     gps \
     lhd \
+    macloader \
     rild \
     vendor.samsung.hardware.gnss@2.1-service \
     tzdaemon \
