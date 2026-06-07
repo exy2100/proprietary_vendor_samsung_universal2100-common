@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/init.vendor.rilcommon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.rilcommon.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/teegris_v4.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/teegris_v4.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc \
+    vendor/samsung/universal2100-common/proprietary/vendor/etc/init/vendor.samsung.hardware.sysinput-default.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.hardware.sysinput-default.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/vendor.samsung.rild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.samsung.rild.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/wifi.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi.rc \
     vendor/samsung/universal2100-common/proprietary/vendor/etc/init/wifi_brcm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wifi_brcm.rc \
@@ -200,6 +201,7 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio.exclude.slsi.xml \
     vendor.samsung.hardware.radio_manifest_2_34.xml \
     vendor.samsung.hardware.sehradio_manifest_2_34.xml \
+    vendor.samsung.hardware.sysinput-default.xml \
     epic \
     hermesd \
     android.hardware.drm@1.3-service.widevine \
@@ -209,6 +211,7 @@ PRODUCT_PACKAGES += \
     macloader \
     rild \
     vendor.samsung.hardware.gnss@2.1-service \
+    vendor.samsung.hardware.sysinput-service \
     tzdaemon \
     tzts_daemon
 

@@ -4378,6 +4378,15 @@ prebuilt_etc_xml {
     soc_specific: true,
 }
 
+prebuilt_etc_xml {
+    name: "vendor.samsung.hardware.sysinput-default.xml",
+    owner: "samsung",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.samsung.hardware.sysinput-default.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
 cc_prebuilt_binary {
     name: "epic",
     owner: "samsung",
@@ -4627,6 +4636,38 @@ cc_prebuilt_binary {
                 "android.hardware.gnss@2.1",
                 "vendor.samsung.hardware.gnss@2.0",
                 "vendor.samsung.hardware.gnss@2.1",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.samsung.hardware.sysinput-service",
+    owner: "samsung",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.samsung.hardware.sysinput-service",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "liblog",
+                "libhardware",
+                "libbase",
+                "libbinder_ndk",
+                "vendor.samsung.hardware.sysinput-V2-ndk",
                 "libc++",
                 "libc",
                 "libm",

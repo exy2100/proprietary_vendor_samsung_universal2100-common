@@ -1,0 +1,5 @@
+service sec-sysinput-aidl /vendor/bin/hw/vendor.samsung.hardware.sysinput-service
+    class hal
+    priority -8
+    user system
+    group system
